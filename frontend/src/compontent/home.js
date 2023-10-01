@@ -21,7 +21,7 @@ export default function Home() {
         if (name !== "") {
             return navigate(`/viewpanel/${name}`)
         }
-
+        document.title = "home--jewelry";
     }, [name, navigate])
 
     const calculatebalance = (compound) => {

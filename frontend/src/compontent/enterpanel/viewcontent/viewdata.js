@@ -95,6 +95,7 @@ export default function Viewdata() {
                 console.log(err);
             })
         }
+        document.title = "balancesheet--jewelry"
     }, [])
 
     useEffect(() => {

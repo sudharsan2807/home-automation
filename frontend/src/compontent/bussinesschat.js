@@ -51,6 +51,7 @@ export function Bussinesschat() {
         if (chat === "supplier") {
             Setselect2("4");
         }
+        document.title = "chat--jewelry"
     }, [])
     const selecthandler2 = (e) => {
         Setselect2(e.target.value)

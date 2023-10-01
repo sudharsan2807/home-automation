@@ -61,7 +61,7 @@ export default function Viewpanel() {
                     console.log(err);
                 });
         }
-
+        document.title = "balancesheet--jewelry"
     }, []);
 
 
