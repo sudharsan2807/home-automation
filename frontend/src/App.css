@@ -1,0 +1,1099 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*animation*/
+
+#none {
+  display: none;
+}
+
+.backarrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1.5rem;
+  color: white;
+  font-size: 3rem;
+  z-index: 1000;
+}
+
+.error-register {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: red;
+}
+
+.blurbackground {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  top: 0;
+  z-index: 3;
+}
+
+.backcontain {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, hsla(57, 100%, 55%, 1) 10%, hsla(32, 100%, 45%, 1) 100%);
+  position: fixed;
+  z-index: -5;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, hsla(57, 100%, 55%, 1) 10%, hsla(32, 100%, 45%, 1) 100%);
+}
+
+.container .contain {
+  display: flex;
+  gap: 6rem;
+  top: 50%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 5rem;
+}
+
+.container .contain .col-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1 1 17rem;
+  color: white;
+}
+
+.container .contain .col-1 span {
+  font-size: 7rem;
+  font-family: 'Croissant One', cursive;
+}
+
+.container .contain .col-1 p {
+  font-size: 1rem;
+}
+
+.container .contain .col-1 button {
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  border: none;
+  color: white;
+  width: 12rem;
+  height: 3.5rem;
+  border: 3px solid white;
+  background-color: transparent;
+}
+
+.container .contain .col-1 button:hover {
+  background-color: rgb(255, 149, 0);
+  border: 0;
+}
+
+.container .contain .col-2 {
+  width: 30rem;
+  height: 30rem;
+}
+
+.container .contain .col-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*Entery password */
+
+.enterypass {
+  position: fixed;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 50px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.enterypass i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  font-size: 1rem;
+}
+
+.enterypass span {
+  font-size: 1rem;
+}
+
+.inputbox {
+  position: relative;
+}
+
+.inputbox input {
+  border: 2px solid black;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  font-size: 1rem;
+}
+
+.inputbox span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0 5px;
+  font-size: 0.8rem;
+  background-color: white;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.inputbox input:focus~span,
+.inputbox input:valid~span {
+  transform: translate(0, -19px);
+  z-index: 3;
+  opacity: 1;
+}
+
+.enterypass button {
+  background: linear-gradient(45deg, hsla(57, 100%, 55%, 1) 10%, hsla(32, 100%, 45%, 1) 100%);
+  border: 0;
+  color: white;
+  padding: 7px 40px;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+/*home*/
+.home {
+  padding: 0 5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: white;
+  font-family: 'Croissant One', cursive;
+  font-weight: 600;
+}
+
+.home {
+  padding-bottom: 1rem;
+}
+
+.home .viewpanel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.home .viewpanel .box {
+  flex: 1 1 20rem;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.home .viewpanel .box i {
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  color: rgb(154, 149, 149);
+}
+
+.home .viewpanel .box .circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 11px solid blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.home .viewpanel .box span {
+  font-size: 1.7rem;
+  color: black;
+}
+
+.home .adminpanel {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.home .adminpanel .box {
+  flex: 1 1 25rem;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+  color: white;
+  padding: 3rem;
+  transition: 0.5s;
+}
+
+.home .adminpanel .box span {
+  font-size: 3rem;
+}
+
+.home .adminpanel .box #close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1rem;
+  font-size: 1rem;
+}
+
+.home .adminpanel .box i {
+  font-size: 5rem;
+}
+
+.home .adminpanel .box img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+  z-index: -2;
+  border-radius: 35px;
+}
+
+.home .adminpanel .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 35px;
+  z-index: -1;
+}
+
+.home .adminpanel .box:hover {
+  transform: scale(1.1);
+}
+
+.home .viewpanel .box:hover {
+  transform: scale(1.1);
+}
+
+/*custormersheet*/
+
+.balancesheet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+.balancesheet span {
+  font-size: 3rem;
+  color: white;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.balancesheet p {
+  color: black;
+  font-size: 1rem;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.balancesheet .searchbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.balancesheet .searchbox input {
+  background-color: transparent;
+  color: black;
+  border: 0;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.balancesheet .panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.balancesheet .panel .infopanel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.balancesheet .panel .infopanel span {
+  font-size: 1.2rem;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.balancesheet .adminpanel {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.balancesheet .adminpanel button {
+  background-color: green;
+  color: white;
+  border: 0;
+  border-radius: 30px;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+.balancesheet .adminpanel #delete {
+  background-color: red;
+}
+
+.balancesheet .adminpanel #download {
+  background-color: rgb(177, 52, 30);
+}
+
+.balancesheet .adminpanel button:hover {
+  background-color: transparent;
+  border: 3px solid green;
+}
+
+.balancesheet .adminpanel #download:hover {
+  background-color: transparent;
+  border: 3px solid rgb(177, 52, 30);
+}
+
+.balancesheet .adminpanel #delete:hover {
+  background-color: transparent;
+  border: 3px solid red;
+}
+
+.balancesheet .adminpanel select {
+  background-color: white;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 0;
+  outline: 0;
+}
+
+.balancesheet .classtable {
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.balancesheet table thead {
+  background-color: rgb(244, 244, 244);
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-bottom: 3px solid rgb(0, 0, 0, 0.5);
+}
+
+.balancesheet table,
+.balancesheet th,
+.balancesheet td,
+.balancesheet tr {
+  padding: 1rem;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.balancesheet tr th:nth-child(3) {
+  min-width: 7rem;
+}
+
+.balancesheet tr th:nth-child(4),
+.balancesheet tr th:nth-child(5) {
+  min-width: 14rem;
+}
+
+.balancesheet tbody tr:nth-child(even) {
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+.balancesheet tbody tr:hover {
+  background-color: white;
+}
+
+.balancesheet tfoot {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-top: 3px solid rgb(0, 0, 0, 0.8);
+}
+
+/*Adminboxe*/
+
+.adminboxed {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  background: white;
+  border: 5px solid transparent;
+  border-image: linear-gradient(45deg, hsla(57, 100%, 55%, 1) 10%, hsla(32, 100%, 45%, 1) 100%);
+  border-image-slice: 1;
+  border-radius: 10px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+
+.adminboxed i {
+  font-size: 1.5rem;
+  color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+}
+
+.adminboxed .titlebox {
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.adminboxed form {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.adminboxed form .inputbox {
+  flex: 1 1 10rem;
+}
+
+.adminboxed form #input {
+  max-width: 5rem;
+}
+
+.adminboxed form #input1 #getdetail {
+  background-color: green;
+  border: 0;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.adminboxed form #input1 {
+  max-width: 13rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.adminboxed form #input2 {
+  max-width: 13rem;
+}
+
+.adminboxed form #input3 {
+  min-width: 100%;
+}
+
+.adminboxed form .finalsubmit {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminboxed form .finalsubmit button {
+  background: linear-gradient(45deg, hsla(57, 100%, 55%, 1) 10%, hsla(32, 100%, 45%, 1) 100%);
+  border: none;
+  padding: 10px 40px;
+  color: white;
+  border-radius: 40px;
+  font-size: 1rem;
+}
+
+.adminboxed .productentery {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.adminboxed .productentery .title2 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.adminboxed .productentery .table {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.adminboxed table,
+.adminboxed th,
+.adminboxed td,
+.adminboxed tr {
+  font-weight: 500;
+  text-align: center;
+  padding: 5px;
+}
+
+.adminboxed tfoot {
+  background: linear-gradient(45deg, hsla(57, 100%, 55%, 1) 10%, hsla(32, 100%, 45%, 1) 100%);
+}
+
+.adminboxed tr td button {
+  border-radius: 20px;
+  padding: 5px;
+  border: 0;
+  font-size: 1rem;
+  background-color: red;
+  color: white;
+}
+
+.adminboxed .productentery table thead {
+
+  width: 100%;
+  background: linear-gradient(45deg, hsla(57, 100%, 55%, 1) 10%, hsla(32, 100%, 45%, 1) 100%);
+  border-radius: 50px;
+}
+
+.adminboxed .productentery table tr th:first-child() {
+  max-width: 5px;
+}
+
+.adminboxed .productentery .table .body {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.adminboxed .productentery input {
+  width: 120px;
+  border: 2px solid black;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*editpopup*/
+
+.editpopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 50px;
+  box-shadow: 5px 5px 10px 5px rgb(0, 0, 0 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  z-index: 5;
+  border: 2px solid black;
+}
+
+.editpopup span {
+  color: black;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.editpopup #close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.editpopup .editbtn,
+.editpopup .delbtn {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  width: 100%;
+  color: white;
+  background: linear-gradient(45deg, hsla(57, 100%, 55%, 1) 10%, hsla(32, 100%, 45%, 1) 100%);
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5;
+  overflow: hidden;
+}
+
+.editpopup button {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0;
+  z-index: 4;
+}
+
+.editpopup i {
+  z-index: 4;
+}
+
+.editpopup .editbtn span,
+.editpopup .delbtn span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: green;
+  z-index: 0;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+.editpopup .delbtn span {
+  background-color: red;
+}
+
+.editpopup .editbtn:hover span {
+  width: 100%;
+}
+
+.editpopup .delbtn:hover span {
+  width: 100%;
+}
+
+.deletepop {
+  padding: 3rem;
+  border-radius: 10px;
+  border: 2px solid black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 700;
+}
+
+.deletepop i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+}
+
+.deletepop span {
+  font-size: 2rem;
+  color: rgb(177, 52, 30);
+}
+
+.deletepop button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  background-color: rgb(177, 52, 30);
+  outline: 0;
+  border: 0;
+  color: white;
+}
+
+.box-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  padding-top: 70px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  z-index: 700;
+  border: 2px solid black;
+}
+
+.box-container .billinfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px;
+  display: flex;
+  background-color: green;
+  border-radius: 20px;
+  color: white;
+  padding: 5px;
+}
+
+.box-container .billinfo input {
+  max-width: 1rem;
+  background-color: transparent;
+  border: 0;
+}
+
+.box-container i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1rem;
+}
+
+.box-container .box {
+  height: 3rem;
+  width: 10rem;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.box-container button {
+  border: 0;
+  background-color: green;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+}
+
+#actioncol {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: black;
+}
+
+hr {
+  width: 100%;
+  border-color: black;
+}
+
+.suppliertable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.suppliertable span {
+  font-size: 1.5rem;
+}
+
+.barchat {
+  width: 40rem;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  padding: 35px;
+  z-index: 700;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.barchat #close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+.barchat .selectchat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.barchat .selectchat .select1,
+.barchat .selectchat .select2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 5px 10px;
+  background-color: blueviolet;
+  border-radius: 20px;
+  color: white;
+}
+
+.barchat .selectchat select {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  color: white;
+}
+
+.barchat .selectchat option {
+  color: black;
+  border: 0;
+}
+
+.barchat .chattype {
+  background-color: #6a59ff;
+  padding: 5px;
+  border-radius: 20px;
+  width: 5.8rem;
+  border: none;
+  outline: none;
+  color: white;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.barchat .selectchat .select2 {
+  background-color: #ff0066;
+}
+
+.barchat .chatbox {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .container .contain .col-1 span {
+    font-size: 6rem;
+    gap: 2rem;
+  }
+
+  .balancesheet .classNametable {
+    width: 800px;
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 1100px) {
+  .container .contain .col-1 span {
+    font-size: 5rem;
+  }
+
+  .container .contain {
+    gap: 2rem;
+  }
+
+
+}
+
+@media (max-width: 1000px) {
+  .container .contain {
+    flex-direction: column-reverse;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .balancesheet .classNametable {
+    width: 500px;
+    overflow: scroll;
+  }
+
+  .balancesheet #adminpanel,
+  .balancesheet #infopanel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 800px) {
+  .container .contain {
+    flex-direction: column-reverse;
+  }
+
+  .balancesheet #infopanel span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .adminboxed {
+    top: 70%;
+  }
+
+  .barchat {
+    width: 30rem;
+    overflow: auto;
+  }
+
+  .barchat .chatbox {
+    width: 570px;
+    height: 283px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home .adminpanel .box {
+    padding: 1rem;
+  }
+
+  .home .adminpanel .box span {
+    font-size: 2rem;
+  }
+
+  .home .adminpanel .box i {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .container .contain .col-2 {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .balancesheet .classNametable {
+    width: 400px;
+    overflow: scroll;
+  }
+
+  .barchat {
+    width: 20rem;
+    padding: 35px 5px;
+  }
+
+  .backarrow {
+    font-size: 1.5rem;
+  }
+
+  .balancesheet span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .container .contain .col-1 span {
+    font-size: 3rem;
+  }
+
+  .container {
+    height: 130vh;
+  }
+
+  .home {
+    padding: 1rem;
+  }
+
+  .home .viewpanel .box .circle {
+    width: 100px;
+    height: 100px;
+    border: 8px solid blueviolet;
+  }
+
+  .container .contain .col-2 {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .balancesheet .classNametable {
+    width: 300px;
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 350px) {
+  .barchat {
+    width: 17rem;
+    padding: 35px 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container .contain .col-2 {
+    width: 17rem;
+    height: 17rem;
+  }
+
+  .home .viewpanel .box .circle {
+    width: 80px;
+    height: 80px;
+  }
+
+}
