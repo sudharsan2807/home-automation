@@ -25,13 +25,17 @@ export default function Supplierform() {
         if (type === "add") {
             SUPPLIER_GET_MAIN(id).then((response) => {
                 Setinput({ ...input, name: response.data.name });
-            });
+            }).catch((err) => {
+                console.log(err);
+            })
         }
         if (type === "edit") {
             SUPPLIER_GET(id).then((response) => {
                 const { payback, bill, balance } = response.data;
                 Setinput({ ...input, name: response.data.name, supplier: { ...input.supplier, payback, bill, balance } });
-            });
+            }).catch((err) => {
+                console.log(err);
+            })
         } else {
             SUPPLIER_GET_ALL().then((response) => {
                 const combinedProductData = response.data.reduce((accumulator, currentBill) => {
@@ -47,7 +51,9 @@ export default function Supplierform() {
                     console.log("insertbill", insertbill);
                     Setbill(insertbill);
                 }
-            });
+            }).catch((err) => {
+                console.log(err);
+            })
 
             SUPPLIER_GET_MAIN(id).then((response) => {
                 Setinput({ ...input, name: response.data.name });
@@ -68,6 +74,8 @@ export default function Supplierform() {
                 console.log(err);
             })
             SUPPLIER_PUT(id, input.supplier).then(() => {
+            }).catch((err) => {
+                console.log(err);
             })
         } else {
             SUPPLIER_ADD(input, id).then((response) => {

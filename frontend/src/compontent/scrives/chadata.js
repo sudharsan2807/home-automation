@@ -13,7 +13,9 @@ export function Chatcustomerbalance(Setgetdata, Setlabel) {
             return totalBalance;
         });
         return Setgetdata(sumOfBalances)
-    });
+    }).catch((err) => {
+        console.log(err);
+    })
 }
 
 export function Chatstockgram(Setgetdata, Setlabel) {
@@ -26,6 +28,8 @@ export function Chatstockgram(Setgetdata, Setlabel) {
             return totalBalance
         })
         Setgetdata(sumOfbalance);
+    }).catch((err) => {
+        console.log(err);
     })
 }
 
@@ -41,7 +45,9 @@ export function Chatsupplierpayback(Setgetdata, Setlabel) {
                     allArrays[i].push(dat[i].payback);
                 }
             }
-        });
+        }).catch((err) => {
+            console.log(err);
+        })
         Setlabel(allArrays.map((dat, index) => "bill " + index + 1))
         const sumofpayback = allArrays.map((dat, index) => {
             const totalsupplierValue = dat.reduce((call, payback) => call + payback, 0)
@@ -71,5 +77,7 @@ export function Chatsupplierbalance(Setgetdata, Setlabel) {
             return totalsupplierValue
         })
         Setgetdata(sumofpayback);
+    }).catch((err) => {
+        console.log(err);
     })
 }

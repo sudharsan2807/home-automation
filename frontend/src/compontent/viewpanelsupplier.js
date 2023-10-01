@@ -15,7 +15,9 @@ export default function Viewpanelsupplier() {
         SUPPLIER_GET_ALL().then((response) => {
             Setdata(response.data);
             setExpandedTables(Array(response.data.length).fill(false));
-        });
+        }).catch((err) => {
+            console.log(err);
+        })
 
     }, []);
 

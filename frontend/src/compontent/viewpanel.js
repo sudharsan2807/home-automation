@@ -75,9 +75,11 @@ export default function Viewpanel() {
                 .then((response) => {
                     const data = response.data;
                     const bills = data.map((dat, index) => dat.bill);
+                    console.log(bills);
                     if (bills.length !== 0) {
                         const maxbill = Math.max(...bills);
                         ADD_STORAGE(maxbill + 1);
+                        navigate('add');
                     } else {
                         ADD_STORAGE(1);
                     }
@@ -94,6 +96,7 @@ export default function Viewpanel() {
                     if (bills.length !== 0) {
                         const maxbill = Math.max(...bills);
                         ADD_STORAGE(maxbill + 1);
+                        navigate('add');
                     } else {
                         ADD_STORAGE(1);
                     }
@@ -102,7 +105,6 @@ export default function Viewpanel() {
                     console.error('Error fetching data:', error);
                 });
         }
-        navigate('add');
     };
 
     const calculateTotalPieces = (compound) => {
