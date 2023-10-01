@@ -1,6 +1,6 @@
 import axios, { Axios } from "axios"
 
-const base_url = "http://localhost:5000/bussiness";
+const base_url = "https://jewelry-balance.onrender.com";
 
 export const SUPPLIER_GET_ALL = () => {
     return axios.get(`${base_url}/supplier/all`)
